@@ -526,7 +526,50 @@ body{
         font-size:.75rem;
     }
 }
+@media (max-width:768px){
 
+    .timeline{
+        padding-left:0;
+    }
+
+    .timeline::before{
+        left:18px;
+        transform:none;
+    }
+
+    .timeline-dot{
+        left:18px;
+        transform:none;
+    }
+
+    .timeline-item{
+        margin-bottom:1.5rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content{
+
+        margin:0 0 0 45px;
+        padding:1rem;
+
+        width:calc(100% - 60px);
+        max-width:none;
+
+        box-sizing:border-box;
+    }
+
+    .timeline-content h3{
+        font-size:1.1rem;
+        line-height:1.4;
+        word-break:break-word;
+    }
+
+    .timeline-content p,
+    .timeline-content{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+}
     /* Sections */
     section {
     width: 100%;
