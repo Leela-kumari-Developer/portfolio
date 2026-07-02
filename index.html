@@ -339,7 +339,7 @@
                 transform: translateY(0);
             }
         }
-        /* =========================================
+/* =========================================
    MOBILE & TABLET RESPONSIVE FIXES
 ========================================= */
 
@@ -526,49 +526,68 @@ body{
         font-size:.75rem;
     }
 }
-@media (max-width:768px){
+@media screen and (max-width: 768px) {
 
-    .timeline{
-        padding-left:0;
+    /* Remove timeline line */
+    .timeline::before {
+        display: none !important;
     }
 
-    .timeline::before{
-        left:18px;
-        transform:none;
+    /* Remove dots */
+    .timeline-dot {
+        display: none !important;
     }
 
-    .timeline-dot{
-        left:18px;
-        transform:none;
+    /* Reset timeline items */
+    .timeline-item {
+        margin-bottom: 20px;
     }
 
-    .timeline-item{
-        margin-bottom:1.5rem;
-    }
-
+    /* Make cards full width */
+    .timeline-content,
     .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content{
+    .timeline-item:nth-child(even) .timeline-content {
 
-        margin:0 0 0 45px;
-        padding:1rem;
+        width: 100% !important;
+        max-width: 100% !important;
 
-        width:calc(100% - 60px);
-        max-width:none;
+        margin: 0 !important;
+        padding: 20px !important;
 
-        box-sizing:border-box;
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+
+        box-sizing: border-box;
     }
 
-    .timeline-content h3{
-        font-size:1.1rem;
-        line-height:1.4;
-        word-break:break-word;
+    .timeline-content h3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
     }
 
-    .timeline-content p,
-    .timeline-content{
-        font-size:.95rem;
-        line-height:1.7;
+    .timeline-content p {
+        font-size: 0.95rem;
     }
+}
+    .experience-cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.timeline-dot{
+    display:none;
+}
+
+.timeline::before{
+    display:none;
+}
+
+.timeline-item:nth-child(odd) .timeline-content,
+.timeline-item:nth-child(even) .timeline-content{
+    margin:0;
+    max-width:100%;
 }
     /* Sections */
     section {
