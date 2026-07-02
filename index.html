@@ -339,13 +339,217 @@
                 transform: translateY(0);
             }
         }
+        /* =========================================
+   MOBILE & TABLET RESPONSIVE FIXES
+========================================= */
 
-        /* Sections */
-       section {
+/* Prevent horizontal scroll */
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+/* Hero Layout */
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    gap:3rem;
+}
+
+.hero-content{
+    flex:1;
+    min-width:300px;
+}
+
+.hero-visual{
+    flex:1;
+    min-width:300px;
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+
+    section{
+        padding:4rem 2rem;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .orb-wrap{
+        width:280px;
+        height:280px;
+    }
+
+    .chip{
+        font-size:.65rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content{
+        max-width:44%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+    nav{
+        padding:1rem;
+    }
+
+    .nav-container{
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:0.8rem;
+    }
+
+    section{
+        padding:4rem 1.2rem;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:4rem;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:2.3rem;
+        line-height:1.2;
+    }
+
+    .hero-role{
+        font-size:0.95rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .orb-wrap{
+        width:230px;
+        height:230px;
+    }
+
+    .orb-core{
+        inset:55px;
+    }
+
+    .chip{
+        display:none;
+    }
+
+    .section-title{
+        font-size:1.8rem;
+    }
+
+    .skills-grid,
+    .soft-skills-grid,
+    .projects-grid,
+    .exploring-grid,
+    .contact-cards{
+        grid-template-columns:1fr;
+    }
+
+    .project-card,
+    .skill-card,
+    .soft-skill-card,
+    .contact-card{
+        padding:1.5rem;
+    }
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-dot{
+        left:20px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content{
+        margin-left:50px;
+        margin-right:0;
+        max-width:calc(100% - 60px);
+        padding:1rem;
+    }
+
+    .contact-icon{
+        width:65px;
+        height:65px;
+        font-size:1.5rem;
+    }
+
+    .cube{
+        display:none;
+    }
+
+    .glow{
+        opacity:.15;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px){
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .hero-content p{
+        font-size:0.95rem;
+    }
+
+    .orb-wrap{
+        width:200px;
+        height:200px;
+    }
+
+    .orb-core{
+        inset:50px;
+    }
+
+    .orb-txt{
+        font-size:.55rem;
+    }
+
+    .logo{
+        font-size:1.2rem;
+    }
+
+    .nav-links a{
+        font-size:.75rem;
+    }
+}
+
+    /* Sections */
+    section {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 6rem 4rem;
+    padding: 6rem 2rem;
 }
 
         .section-title {
@@ -1070,7 +1274,7 @@
         <div class="hero-content">
             <h1> <span class="highlight">Hello, I'm </span>Leela Kumari</h1>
             <p class="hero-role">Software Engineer · Zoho Developer · Low-Code App Developer</p>
-            <p>I build smart, scalable applications that automate the way businesses work —<br> turning complex workflows into elegant low-code solutions.</p>
+            <p>I build smart, scalable applications that automate the way businesses work and turning complex workflows into elegant low-code solutions.</p>
             <div class="cta-buttons">
                 <a href="Leelakumari_resume_.pdf"
    class="btn btn-primary"
